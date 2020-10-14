@@ -1,0 +1,13 @@
+<div class="author-card">
+   <div class="author-image">
+    <div class="author-panel-down">
+      <LinkTo @route="author" @model={{ @user.id }} >
+        <button>Learn more...</button>
+      </LinkTo>
+    </div>
+    <img src={{@user.avatar}}>
+  </div>
+  <div class="author-details">
+    <h3>{{@user.first_name }} {{ @user.last_name}} </h3>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="name">
+  <p>Jose Martin Hernandez Castañeda</p>
+</div>
+<div class="card-presentation grids grids-2">
+    <div class="section-explain">
+      <h3><span>1</span>Create</h3>
+      <p>his would consist of a function which we would call when a new library book
+        is being added to the catalog. The program calling the function would supply
+        the values for “title”, “author”, and “isbn”. After this function is called,
+        there should be a new entry in the books resource corresponding to this new
+        book. Additionally, the new entry is assigned a unique id, which can be used
+        to access this resource later.</p>
+    </div>
+    <div class="section-explain">
+      <h3><span>2</span>Read</h3>
+      <p>This would consist of a function which would be called to see all of the books
+        currently in the catalog. This function call would not alter the books in the
+        catalog - it would simply retrieve the resource and display the results. We would
+        also have a function to retrieve a single book, for which we could supply the title,
+        author, or ISBN. Again, this book would not be modified, only retrieved.</p>
+      </div>
+    <div class="section-explain">
+      <h3><span>3</span>Update</h3>
+      <p>There should be a function to call when information about a book must be changed.
+        The program calling the function would supply the new values for “title”, “author”,
+        and “isbn”. After the function call, the corresponding entry in the books resource
+        would contain the new fields supplied.</p>
+    </div>
+    <div class="section-explain">
+      <h3><span>4</span>Delete</h3>
+      <p>There should be a function to call to remove a library book from the catalog. The
+        program calling the function would supply one or more values (“title”, “author”, and/or “isbn”)
+        to identify the book, and then this book would be removed from the books resource. After this
+        function is called, the books resource should contain all of the books it had before,
+        except for the one just deleted.</p>
+    </div>
+</div>
+<div class="provider">
+    <p>Api provides <span>by reqres.in</span></p>
+</div>
+<main class="grids grids-4 cards-panel">
+    {{#each this.model as | user |}}
+        <AuthorCard @user={{user}} ></AuthorCard>
+    {{/each}}
+</main>

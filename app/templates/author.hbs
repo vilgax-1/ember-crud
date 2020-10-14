@@ -1,0 +1,37 @@
+<div class="details-container">
+  <form class="form" id="form" {{action 'updateUser' on="submit"}} >
+        <div class="box">
+          <label>Name</label>
+          {{ input value=Name  }}
+        </div>
+        <div class="box">
+          <label>Job</label>
+          {{ input value=Job  }}
+        </div>
+        <div class="button-container">
+          <button type="submit" class="btn btn-save">Save</button>
+        </div>
+  </form>
+  <div class="details-card">
+    <div class="details-image">
+      <img src={{ @model.data.avatar }}>
+    </div>
+    <div class="details-panel">
+        <h2>{{ @model.data.first_name }} {{ @model.data.last_name }}</h2>
+        <h3>{{ @model.data.email }}</h3>
+        <h3>{{ @model.ad.company }}</h3>
+        <p> {{ @model.ad.text }} </p>
+        <div>
+            <div class="details-buttons" id="main">
+              <button class="btn btn-edit" {{ action 'hideButtons'}} >Edit</button>
+              <button class="btn btn-cancel" {{ action 'deleteUser'}}>Delete</button>
+            </div>
+            <div class="details-buttons hide" id="edit">
+              <button class="btn btn-cancel" {{ action 'hideButtons'}}>Cancel</button>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+{{outlet}}

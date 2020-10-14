@@ -1,0 +1,84 @@
+@import './author-card.scss';
+@import './author-details.scss';
+@import './index.scss';
+
+*{
+  font-family: Montserrat;
+}
+
+body{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hide{
+  display: none;
+}
+
+.btn{
+  height: 35px;
+  width: 103px;
+  margin: 10px 0;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  &-cancel{
+    background-color: #ff5252;
+  }
+  &-save{
+    background-color: #5695fe;
+  }
+  &-edit{
+    background-color: #fc8c3a;
+  }
+}
+
+
+.grids{
+  width: 100%;
+  display: grid;
+  height: auto;
+
+  &-1{
+    grid-template-columns: repeat(1, 100%);
+  }
+  &-2{
+    grid-template-columns: repeat(2, 50%);
+  }
+  &-3{
+    grid-template-columns: repeat(3, 33%);
+  }
+  &-4{
+    grid-template-columns: repeat(4, 25%);
+  }
+  &-5{
+    grid-template-columns: repeat(5, 20%);
+  }
+}
+
+
+@media (max-width: 1200px){
+  .grids{
+    &-4,&-5{
+      grid-template-columns: repeat(3, 33%);
+    }
+  }
+}
+
+@media (max-width: 1000px){
+  .grids{
+    &-3,&-4,&-5{
+      grid-template-columns: repeat(2, 50%);
+    }
+  }
+}
+
+@media (max-width: 600px){
+  .grids {
+    &-1,&-2,&-3,&-4,&-5{
+      grid-template-columns: 100%;
+    }
+  }
+}
