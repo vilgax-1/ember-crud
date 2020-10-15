@@ -1,0 +1,36 @@
+.create-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) ;
+  z-index: 2;
+  background: #fff;
+  height: 250px;
+  width: 400px;
+
+  .container-input{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    input{
+      display: block;
+      width: inherit;
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #495057;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      border-radius: .25rem;
+    }
+  }
+
+  button{
+    margin:25px auto;
+  }
+}

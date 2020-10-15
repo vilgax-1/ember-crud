@@ -1,5 +1,5 @@
 <div class="details-container">
-  <form class="form" id="form" {{action 'updateUser' on="submit"}} >
+  <form class="form" id="form" {{action 'updateUser' @model.data.id  on="submit"}} >
         <div class="box">
           <label>Name</label>
           {{ input value=Name  }}
@@ -24,7 +24,7 @@
         <div>
             <div class="details-buttons" id="main">
               <button class="btn btn-edit" {{ action 'hideButtons'}} >Edit</button>
-              <button class="btn btn-cancel" {{ action 'deleteUser'}}>Delete</button>
+              <button class="btn btn-cancel" {{ action 'deleteUser' @model.data.id}}>Delete</button>
             </div>
             <div class="details-buttons hide" id="edit">
               <button class="btn btn-cancel" {{ action 'hideButtons'}}>Cancel</button>
@@ -33,5 +33,3 @@
     </div>
   </div>
 </div>
-
-{{outlet}}

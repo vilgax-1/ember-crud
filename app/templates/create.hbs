@@ -1,0 +1,11 @@
+<form class="create-card"  {{action 'createUser' on="submit"}}>
+    <div class="container-input">
+      <label>Name</label>
+      {{ input value=Name }}
+    </div>
+    <div class="container-input">
+      <label>Job</label>
+      {{ input value=Job }}
+    </div>
+    <button class="btn btn-save">Create</button>
+</form>
