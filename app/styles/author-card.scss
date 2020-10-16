@@ -26,22 +26,6 @@
     align-items: center;
     overflow: hidden;
     transition: .75s;
-    button{
-      color: #fff;
-      background-color: #5695fe;
-      padding: 0 1.25rem;
-      font-size: .75rem;
-      line-height: 32px;
-      border-radius: 0;
-      border: none;
-      font-weight: 400;
-      cursor: pointer;
-      transition: .2s;
-      outline: none;
-      &:hover{
-        box-shadow: 10px 0 20px 10px rgba(64,64,64,0.09);
-      }
-    }
   }
 
   img{
