@@ -2,7 +2,7 @@ import Controller from '@ember/controller';
 import { action } from '@ember/object';
 
 export default class AuthorController extends Controller {
-  url = 'https://reqres.in/api/users/';
+  url = 'https://usuarios.in/api/users/';
   show = false;
 
   @action
@@ -24,13 +24,18 @@ export default class AuthorController extends Controller {
 
   @action
     updateUser(id){
-      const body = { name: this.get('Name'), job: this.get('Job') }
+      const body = {
+        name: this.get('name'),
+        company: this.get('company'),
+        email: this.get('email'),
+        text: this.get('text')
+      }
       fetch(this.url + id, {
         method: 'PUT',
-        body: body
+        body: body,
+        headers: { 'Content-Type': 'application/json'}
       }).then((resp) => resp.json())
       .then((data)=> {
-        console.log('user updated', data);
         this.transitionToRoute('/');
       });
     }
@@ -39,7 +44,7 @@ export default class AuthorController extends Controller {
     deleteUser(id){
       fetch(this.url + id, {
         method: 'DELETE'
-      }).then(() => console.log('user delete'))
+      }).then((data) => console.log(data))
       .then(()=> this.transitionToRoute('/') );
     }
 }

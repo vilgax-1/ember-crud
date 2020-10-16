@@ -1,7 +1,7 @@
 import Route from '@ember/routing/route';
 
 export default class AuthorRoute extends Route {
-  url = 'https://reqres.in/api/users/';
+  url = 'https://usuarios.in/api/users/';
 
   model(params){
     const { author_id } = params;

@@ -4,11 +4,10 @@ import { tracked } from '@glimmer/tracking';
 
 export default class IndexRoute extends Route {
   model(){
-    return fetch('https://reqres.in/api/users')
+    return fetch('https://usuarios.in/api/users')
     .then( resp => resp.json())
     .then( users=> {
-        console.log(users.data);
-        return users.data;
+        return users;
     });
   }
 }

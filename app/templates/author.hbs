@@ -1,12 +1,21 @@
 <div class="details-container">
-  <form class="form" id="form" {{action 'updateUser' @model.data.id  on="submit"}} >
+  <div class="card">
+  <form class="form" id="form" {{action 'updateUser' @model.id  on="submit"}} >
         <div class="box">
           <label>Name</label>
-          {{ input value=Name  }}
+          {{ input value=name  }}
         </div>
         <div class="box">
-          <label>Job</label>
-          {{ input value=Job  }}
+          <label>Company</label>
+          {{ input value=company  }}
+        </div>
+        <div class="box">
+          <label>Email</label>
+          {{ input value=email  }}
+        </div>
+        <div class="box">
+          <label>Text</label>
+          {{ input value=text  }}
         </div>
         <div class="button-container">
           <button type="submit" class="btn btn-save">Save</button>
@@ -14,22 +23,23 @@
   </form>
   <div class="details-card">
     <div class="details-image">
-      <img src={{ @model.data.avatar }}>
+      <img src={{ @model.avatar }}>
     </div>
     <div class="details-panel">
-        <h2>{{ @model.data.first_name }} {{ @model.data.last_name }}</h2>
-        <h3>{{ @model.data.email }}</h3>
-        <h3>{{ @model.ad.company }}</h3>
-        <p> {{ @model.ad.text }} </p>
+        <h2>{{ @model.name }} </h2>
+        <h3>{{ @model.email }}</h3>
+        <h3>{{ @model.company }}</h3>
+        <p> {{ @model.text }} </p>
         <div>
             <div class="details-buttons" id="main">
               <button class="btn btn-edit" {{ action 'hideButtons'}} >Edit</button>
-              <button class="btn btn-cancel" {{ action 'deleteUser' @model.data.id}}>Delete</button>
+              <button class="btn btn-cancel" {{ action 'deleteUser' @model.id}}>Delete</button>
             </div>
             <div class="details-buttons hide" id="edit">
               <button class="btn btn-cancel" {{ action 'hideButtons'}}>Cancel</button>
             </div>
         </div>
     </div>
+  </div>
   </div>
 </div>

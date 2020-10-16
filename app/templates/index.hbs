@@ -37,6 +37,9 @@
 </div>
 <div class="provider">
     <p>Api provides <span>by reqres.in</span></p>
+    <LinkTo @route="create">
+        <button class="btn btn-save">New user</button>
+    </LinkTo>
 </div>
 <main class="grids grids-4 cards-panel">
     {{#each this.model as | user |}}

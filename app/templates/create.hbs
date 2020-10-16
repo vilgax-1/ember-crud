@@ -1,11 +1,26 @@
 <form class="create-card"  {{action 'createUser' on="submit"}}>
     <div class="container-input">
       <label>Name</label>
-      {{ input value=Name }}
+      {{ input value=name }}
     </div>
     <div class="container-input">
-      <label>Job</label>
-      {{ input value=Job }}
+      <label>Company</label>
+      {{ input value=company }}
+    </div>
+    <div class="container-input">
+      <label>Email</label>
+      {{ input value=email }}
+    </div>
+    <div class="container-input">
+      <label>Text</label>
+      {{ input value=text }}
+    </div>
+    <div class="container-input">
+      <label>Avatar</label>
+      <input type="file" id="image" onchange={{action "uploadFile"}}>
+    </div>
+    <div class="hide">
+      {{ input value=image }}
     </div>
     <button class="btn btn-save">Create</button>
 </form>
